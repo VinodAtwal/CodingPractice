@@ -6,4 +6,9 @@ public class Utility {
         arr[(int) a]=arr[(int) b];
         arr[(int) b]=temp;
     }
+    public static <T> void printArrary(T[] arr){
+        for(T a: arr){
+            System.out.print(a+" ");
+        }
+    }
 }
