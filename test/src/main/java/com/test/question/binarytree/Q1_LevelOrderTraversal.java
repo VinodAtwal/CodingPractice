@@ -25,11 +25,7 @@ public class Q1_LevelOrderTraversal {
         }
 
     }
-    public static void levelOrderTraversalRecursion(Node root){
-        System.out.println(root.data);
-        if(null!=root.left)levelOrderTraversalRecursion(root.left);
-        if(null!=root.right)levelOrderTraversalRecursion(root.right);
-    }
+
 
 
     public static void main(String[] args) {
@@ -56,7 +52,7 @@ public class Q1_LevelOrderTraversal {
              11   N
         * */
 //        levelOrderTraversal(root);
-            levelOrderTraversalRecursion(root);
+
 
     }
 }
