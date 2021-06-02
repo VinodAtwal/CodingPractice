@@ -28,7 +28,7 @@ public class Q4_MirrorTree {
         n1.right=n4;
         n2.right=n5;
         n3.left=n6;
-        Node root1 = new Node(10, new Node(20, new Node(40), new Node(60)), new Node(30));
+        Node root1 =new Node(10, new Node(20, new Node(40), new Node(60)), new Node(30));
         Q1_LevelOrderTraversal.levelOrderTraversal(root);
         System.out.println("");
         mirrorTree(root);
