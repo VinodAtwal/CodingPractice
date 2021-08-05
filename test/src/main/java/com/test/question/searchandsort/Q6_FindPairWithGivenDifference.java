@@ -14,6 +14,7 @@ public class Q6_FindPairWithGivenDifference {
             }
         }
     }
+    
 
     public static void main(String[] args) {
 //        int arr[] = {5, 20, 3, 2, 50, 80}, n = 78;

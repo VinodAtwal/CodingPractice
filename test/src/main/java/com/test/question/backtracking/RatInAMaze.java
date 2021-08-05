@@ -1,4 +1,4 @@
-package com.test.Algorithm.backtracking;
+package com.test.question.backtracking;
 
 public class RatInAMaze {
 

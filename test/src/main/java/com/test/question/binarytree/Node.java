@@ -2,18 +2,19 @@ package com.test.question.binarytree;
 
 public class Node {
     Integer data;
-    Node left;
-    Node right;
+    public Node left;
+    public Node right;
 
     public Node(Integer data) {
         this.data = data;
-        this.left=null;
-        this.right=null;
+        left = null;
+        right = null;
     }
+
     public Node(Integer data, Node left, Node right) {
         this.data = data;
-        this.left=left;
-        this.right=right;
+        this.left = left;
+        this.right = right;
     }
 
     public Integer getData() {

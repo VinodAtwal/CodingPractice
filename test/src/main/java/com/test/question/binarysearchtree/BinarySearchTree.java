@@ -1,7 +1,8 @@
 package com.test.question.binarysearchtree;
 
-class Node{
+class Node {
     Integer data;
+    Integer degree = 0;
     Node left;
     Node right;
 
@@ -13,8 +14,8 @@ class Node{
 
     public Node(Integer data) {
         this.data = data;
-        this.left = null;
-        this.right = null;
+        left = null;
+        right = null;
     }
 
     public void setData(Integer data) {
@@ -38,6 +39,7 @@ class Node{
                 '}';
     }
 }
+
 public class BinarySearchTree {
 
     public static Node insert(Node root, Integer data) {
@@ -53,7 +55,9 @@ public class BinarySearchTree {
     }
 
     public static Node insertIterative(Node root, Integer data) {
-        if (root == null) return new Node(data);
+        if (root == null) {
+            return new Node(data);
+        }
         Node node = root;
         while (node != null) {
             if (node.data < data) {
@@ -89,9 +93,14 @@ public class BinarySearchTree {
     }
 
     public static Node search(Node root, Integer data) {
-        if (root == null || root.data == data) return root;
-        if (root.data < data) return search(root.right, data);
-        else return search(root.left, data);
+        if (root == null || root.data == data) {
+            return root;
+        }
+        if (root.data < data) {
+            return search(root.right, data);
+        } else {
+            return search(root.left, data);
+        }
 
     }
 
@@ -118,7 +127,7 @@ public class BinarySearchTree {
                         return null;
                     }
                     return root;
-                } else if (node.left == null ) {
+                } else if (node.left == null) {
                     if (prev != null) {
                         if (prev.right == node) {
                             prev.right = node.right;
@@ -140,28 +149,28 @@ public class BinarySearchTree {
                         root = root.left;
                     }
                     return root;
-                }else{
-                    Node n1= node.right;
-                    while(n1.left!=null) {
+                } else {
+                    Node n1 = node.right;
+                    while (n1.left != null) {
                         n1 = n1.left;
                     }
-                    Node leftNode =n1;
+                    Node leftNode = n1;
                     deleteNode(node, n1.data);
                     if (prev != null) {
                         if (prev.right == node) {
-                            leftNode.left= node.left;
-                            leftNode.right=node.right;
-                            prev.right=leftNode;
+                            leftNode.left = node.left;
+                            leftNode.right = node.right;
+                            prev.right = leftNode;
 
                         } else {
-                            leftNode.left= node.left;
-                            leftNode.right=node.right;
-                            prev.left=leftNode;
+                            leftNode.left = node.left;
+                            leftNode.right = node.right;
+                            prev.left = leftNode;
                         }
                     } else {
-                        leftNode .left= root.left;
-                        leftNode.right=root.right;
-                        root=leftNode;
+                        leftNode.left = root.left;
+                        leftNode.right = root.right;
+                        root = leftNode;
                     }
                     return root;
 
@@ -197,7 +206,7 @@ public class BinarySearchTree {
         System.out.println(root);
         System.out.println();
 
-        root=deleteNode(root, 41);
+        root = deleteNode(root, 41);
         System.out.println("Root After deletion of your requested node");
         System.out.println(root);
 
