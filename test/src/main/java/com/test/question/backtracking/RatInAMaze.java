@@ -23,8 +23,6 @@ public class RatInAMaze {
         // down
         ratInMaze(maze, x, y + 1, ans + "D", currentPath);
         currentPath[x][y] = false;
-
-
     }
 
     public static void main(String[] args) {
